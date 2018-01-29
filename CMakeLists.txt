@@ -9,6 +9,6 @@ find_library(CRYPTOPP_LIB cryptopp)
 find_package("boost")
 find_library(BOOST_SYSTEM boost_system)
 
-add_executable(blockchain main.cc blockchain.cc sha256.cpp tx.cpp server.cpp block.cpp)
+add_executable(blockchain main.cc blockchain.cc sha256.cpp tx.cpp server.cpp block.cpp utils.h)
 
 target_link_libraries(blockchain "${CRYPTOPP_LIB}" "${BOOST_SYSTEM}")

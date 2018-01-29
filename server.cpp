@@ -2,11 +2,9 @@
 #include <iostream>
 
 #include <json.hpp>
-
 #include "crow_all.h"
-#include "server.h"
-#include "tx.h"
 
+#include "server.h"
 
 void blockchain::Server::run() {
 
