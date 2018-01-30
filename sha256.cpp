@@ -1,13 +1,18 @@
-#include <files.h>
+#include "files.h"
 #include "cryptlib.h"
 #include "filters.h"    // StringSink
 #include "osrng.h"      // AutoSeededRandomPool
 #include "hex.h"        // HexEncoder
 
+#include <iostream>
+#include <string>
+#include <bitset>
+
 #include "sha256.h"
 
 using namespace std;
 using namespace CryptoPP;
+
 
 string sha256(const string& s) {
     SHA256 hash = SHA256();
