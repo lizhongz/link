@@ -15,7 +15,7 @@ private:
     const static int difficulty = 4;
 
 public:
-    Blockchain() : curr(0, "") {}
+    Blockchain();
 
     void add_tx(Tx tx);
     std::vector<Block> get_chain() const;
