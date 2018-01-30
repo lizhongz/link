@@ -9,6 +9,8 @@
 
 namespace blockchain {
 
+using namespace std::chrono;
+
 class Block {
 public:
 
@@ -17,15 +19,15 @@ public:
     std::vector<Tx> transactions;
     std::string prev;
     std::string hash_code;
-    std::chrono::system_clock::time_point timestamp;
+    system_clock::time_point timestamp;
 
-    Block(int id, std::string prev) : id(id), prev(prev) {}
+    Block(int id, std::string prev) : id(id), prev(std::move(prev)), nonce(0) {}
 
     void add_tx(Tx tx) {
-        transactions.push_back(tx);
+        transactions.push_back(std::move(tx));
     }
 
-    int size() {
+    unsigned long size() {
         return transactions.size();
     }
 };

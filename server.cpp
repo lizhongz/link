@@ -19,14 +19,13 @@ void blockchain::Server::run() {
         return j.dump();
     });
 
-    CROW_ROUTE(app, "/tx").methods("POST"_method) (
-    [&](const crow::request& req){
+    CROW_ROUTE(app, "/tx").methods("POST"_method) ([&](const crow::request& req){
         auto body = nlohmann::json::parse(req.body);
-        blockchain.add_tx(Tx(
+        blockchain.add_tx(Tx{
             body["from"].get<std::string>(),
             body["to"].get<std::string>(),
             body["amount"].get<double>()
-        ));
+        });
 
         return crow::response("Added transaction");
     });

@@ -5,7 +5,7 @@
 
 
 void blockchain::Blockchain::add_tx(Tx tx) {
-    curr.add_tx(tx);
+    curr.add_tx(std::move(tx));
     if (curr.size() == blk_size) {
         auto blk = curr;
         mine(blk);
@@ -19,7 +19,7 @@ vector<blockchain::Block> blockchain::Blockchain::get_chain() const {
     return chain;
 }
 
-int blockchain::Blockchain::size() const {
+unsigned long blockchain::Blockchain::size() const {
     return chain.size();
 }
 

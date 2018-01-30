@@ -18,14 +18,11 @@ public:
     Blockchain() : curr(0, "") {}
 
     void add_tx(Tx tx);
-
     std::vector<Block> get_chain() const;
-
-    int size() const;
+    unsigned long size() const;
 
 private:
     void mine(Block &blk);
-
     bool is_valid(std::string hash);
 };
 

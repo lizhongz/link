@@ -17,4 +17,4 @@ void blockchain::to_json(nlohmann::json& j, const blockchain::Block& blk) {
         transactions.push_back(nlohmann::json(tx));
     }
     j["transactions"] = transactions;
-}
+} 
