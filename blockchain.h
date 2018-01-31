@@ -6,7 +6,6 @@
 #include <iostream>
 
 #include "block.h"
-#include "sha256.h"
 
 
 namespace blockchain {
