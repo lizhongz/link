@@ -3,6 +3,7 @@
 #include "block.h"
 #include "utils.h"
 
+
 void blockchain::to_json(nlohmann::json& j, const blockchain::Block& blk) {
     j = nlohmann::json({
         {"block", blk.id},

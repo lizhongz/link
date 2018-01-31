@@ -9,6 +9,7 @@
 using namespace std;
 using namespace blockchain;
 
+
 int main() {
     Block blk(0, "");
     cout << blk.transactions.size() << endl;

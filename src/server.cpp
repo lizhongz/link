@@ -6,8 +6,8 @@
 
 #include "server.h"
 
-void blockchain::Server::run() {
 
+void blockchain::Server::run() {
     crow::SimpleApp app;
 
     CROW_ROUTE(app, "/")([](){

@@ -4,13 +4,13 @@
 
 namespace blockchain {
 
-class Server {
-private:
-    Blockchain blockchain;
-    int port = 18080;
+    class Server {
+    private:
+        Blockchain blockchain;
+        int port = 18080;
 
-public:
-    void run();
-};
+    public:
+        void run();
+    };
 
 }
